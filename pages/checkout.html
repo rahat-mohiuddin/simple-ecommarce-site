@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+<!--Tny Slider css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!--Boxicn cdn-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+<!--Favicon-->
+    <link rel="shortcut icon" href="../img/pos.png">
+    
+<!--Custom Style-->
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Posspot Shop</title>
+  </head>
+  <body>
+   
+<!--Header Section-->
+   <header class="header">
+       
+       <div class="overlay_mobile_Sidebar"></div>
+
+<div class="utility-nav d-none d-md-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="small"><i class="bx bx-envelope"></i> info@posspot.com | <i class="bx bx-phone"></i> +88 01863813906
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 text-right">
+        <p class="small"><i class='bx bx-mobile'></i> Save big on our app!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
+  <div class="container">
+
+    <button type="button" id="sidebar_nav" class="btn d-block d-md-none" onclick="openNav()">
+        <i class="bx bx-menu icon-single"></i>
+    </button>
+
+    <a class="navbar-brand" href="../index.html">
+      <h4 class="font-weight-bold"><img src="../img/logo.png" alt=""></h4>
+    </a>
+
+    <ul class="navbar-nav ml-auto d-block d-md-none">
+      <li class="nav-item">
+        <a class="btn btn_cart" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">3</span></a>
+      </li>
+    </ul>
+
+    <div class="collapse navbar-collapse">
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+        <button class="btn btn_search my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
+      </form>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">0</span></a>
+        </li>
+        <li class="nav-item ml-md-3">
+          <a class="btn btn_login" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i> Log In / Register</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sub-menu">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+          <div class="dropdown-menu main_manu_dd" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Mans Fashion</a>
+            <a class="dropdown-item" href="#">Watches & Clock</a>
+            <a class="dropdown-item" href="#">Jewelry</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Campaign</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="search-bar d-block d-md-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="form-inline mb-3 mx-auto">
+          <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+          <button class="btn btn_search" type="submit"><i class="bx bx-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar for mobile navigation -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-10 pl-0">
+          <a class="btn btn-sm" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i>Log In</a>
+        </div>
+
+        <div class="col-2 text-left">
+          <button type="button" id="sidebarCollapseX" class="btn btn-link" onclick="closeNav()">
+              <i class="bx bx-x icon-single"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-unstyled components links">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoris</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Electronics</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Mans Fashion</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Watches & Clock</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Jewelry</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Campaign</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+</nav>
+       
+   </header>
+   
+   <!--Login Form Modal Start-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Enter Phone Number</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+88</div>
+                                </div>
+                                <input type="text" class="form-control" id="" placeholder="Phone Number">
+                            </div>
+                            
+                            <button type="button" class="btn btn_login btn-block" onclick="window.location.href='pages/registration_form.html';">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!--Login Form Modal End-->
+
+   <!--breadcrumb-->
+   <div class="breadcrumb_outer">
+       <div class="container">
+           <ol class="breadcrumb primary-color">
+               <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+               <li class="breadcrumb-item active">Checkout</li>
+           </ol>
+       </div>
+   </div>   
+
+   
+   
+<!--Main-->
+
+   <section>
+       <div class="container">
+       <main>
+    <div class="py-2 text-center checkout">
+      <h2 class="">Checkout</h2>
+      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Your cart</span>
+          <span class="badge bg-warning rounded">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">MEN'S LEATHER SHOES</h6>
+              <small class="text-muted">x2 | Color: Blue | Size: 42</small>
+            </div>
+            <span class="text-muted">৳ 600</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">MEN'S T-SHIRT</h6>
+              <small class="text-muted">x3 | Color: Green | Size: 42</small>
+            </div>
+            <span class="text-muted">৳ 450</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>EID20OFF</small>
+            </div>
+            <span class="text-success">−৳ 60</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (BDT)</span>
+            <strong>৳ 1050</strong>
+          </li>
+        </ul>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">Redeem</button>
+          </div>
+        </form>
+        <a href="" class="btn btn-sm btn-success my-3 w-100 d-none d-sm-block">Place Order</a>
+      </div>
+      <div class="col-md-7 col-lg-8">
+         <h4 class="d-flex justify-content-start align-items-center mb-1">
+             <span class="text-muted">Billing Details</span>
+         </h4>
+          <div class="billing_details">
+              <div class="row align-items-center mt-4">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First Name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col mt-2">
+                        <input type="text" class="form-control" placeholder="Company Name (Optional)">
+                    </div>
+                    
+                </div>
+                <div class="row align-items-center">
+                    <div class="col mt-2">
+                        <select class="form-control" id="sel1">
+                            <option readonly>Country / Region</option>
+                            <option>Bangladesh</option>
+                            <option>India</option>
+                            <option>Afghanistan</option>
+                            <option>Gulisthan</option>
+                            <option>Pakistan</option>
+                            <option>Nowakhali</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row align-items-center mt-2">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Town / City">
+                    </div>
+                    <div class="col">
+                        <select class="form-control" id="sel1">
+                            <option readonly>Select District</option>
+                            <option>Brahmanbaria</option>
+                            <option>Chandpur</option>
+                            <option>Comilla</option>
+                            <option>Chittagong</option>
+                            <option>Dhaka</option>
+                            <option>Sylhet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col mt-2">
+                        <input type="text" class="form-control" placeholder="Street Address (House No & Street Name..)">
+                    </div>
+                </div>
+                
+                <div class="row align-items-center mt-2">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="row align-items-center mt-2">
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                </div>
+          </div>
+<!--Different Ship Address Start================================================================-->
+
+                <hr>
+                 <div class="shippingAdress my-2">
+                     <h4 class="d-flex justify-content-start align-items-center mb-1">
+                         <span class="text-muted">Shipping Address</span>
+                     </h4>
+                     <div class="row align-items-center mt-2">
+                         <div class="col">
+                             <input type="text" class="form-control" placeholder="First Name">
+                         </div>
+                         <div class="col">
+                             <input type="text" class="form-control" placeholder="Last Name">
+                         </div>
+                     </div>
+                     <div class="row align-items-center">
+                         <div class="col mt-2">
+                             <input type="text" class="form-control" placeholder="Company Name (Optional)">
+                         </div>
+
+                     </div>
+                     <div class="row align-items-center">
+                         <div class="col mt-2">
+                             <select class="form-control" id="sel1">
+                                 <option readonly>Country / Region</option>
+                                 <option>Bangladesh</option>
+                                 <option>India</option>
+                                 <option>Afghanistan</option>
+                                 <option>Gulisthan</option>
+                                 <option>Pakistan</option>
+                                 <option>Nowakhali</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="row align-items-center mt-2">
+                         <div class="col">
+                             <input type="text" class="form-control" placeholder="Town / City">
+                         </div>
+                         <div class="col">
+                             <select class="form-control" id="sel1">
+                                 <option readonly>Select District</option>
+                                 <option>Brahmanbaria</option>
+                                 <option>Chandpur</option>
+                                 <option>Comilla</option>
+                                 <option>Chittagong</option>
+                                 <option>Dhaka</option>
+                                 <option>Sylhet</option>
+                             </select>
+                         </div>
+                     </div>
+                     <div class="row align-items-center">
+                         <div class="col mt-2">
+                             <input type="text" class="form-control" placeholder="Street Address (House No & Street Name..)">
+                         </div>
+                     </div>
+
+                     <div class="row align-items-center mt-2">
+                         <div class="col">
+                             <input type="text" class="form-control" placeholder="Phone Number">
+                         </div>
+                     </div>
+                     <div class="row align-items-center mt-2">
+                         <div class="col">
+                             <input type="email" class="form-control" placeholder="Email">
+                         </div>
+                     </div>
+                 </div>
+
+<!--Different Ship Address End==================================================================-->
+                 
+                <div class="form-check mt-4">
+                    <input type="checkbox" class="form-check-input" id="diff_address">
+                    <label class="form-check-label" for="diff_address">I want to ship the product to a different address!</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-info">
+                    <label class="form-check-label" for="save-info">Save this information for next time</label>
+                </div>
+                
+                
+<!--payment option===============================================================================-->
+                <div class="row">
+                    <div class="col my-3">
+                       <h4 class="d-flex justify-content-start align-items-center mb-3">
+                           <span class="text-muted">Make Payment</span>
+                       </h4>
+                        <div class="card bg_pay">
+                            <div class="card-header">
+                                <div class="bg-white">
+                                    <!-- Credit card form tabs -->
+                                    <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                        <li class="nav-item"> <a data-toggle="pill" href="#credit-card" class="nav-link active "> Credit Card </a> </li>
+                                        <li class="nav-item"> <a data-toggle="pill" href="#mobile_banking" class="nav-link ">Mobile Banking </a> </li>
+                                        <li class="nav-item"> <a data-toggle="pill" href="#bank_transfer" class="nav-link ">Bank Transfer</a> </li>
+                                    </ul>
+                                </div> <!-- End -->
+                                <!-- Credit card form content -->
+                                <div class="tab-content">
+                                    <!-- credit card info-->
+                                    <div id="credit-card" class="tab-pane fade show active pt-3">
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="username">
+                                                    <h6>Card Owner</h6>
+                                                </label>
+                                                <input type="text" name="username" placeholder="Card Owner Name" required class="form-control ">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cardNumber">
+                                                    <h6>Card number</h6>
+                                                </label>
+                                                <div class="input-group">
+                                                   <input type="text" name="cardNumber" placeholder="Valid card number" class="form-control " required>
+                                                    <div class="input-group-append">
+                                                    <span class="input-group-text text-muted">
+                                                    <i class='bx bxs-credit-card-front' ></i>
+                                                    </span> </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-8">
+                                                    <div class="form-group"> <label><span class="hidden-xs">
+                                                                <h6>Expiration Date</h6>
+                                                            </span></label>
+                                                        <div class="input-group"> <input type="number" placeholder="MM" name="" class="form-control" required> <input type="number" placeholder="YY" name="" class="form-control" required> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group mb-4"> <label data-toggle="tooltip" title="Three digit CV code on the back of your card">
+                                                            <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                        </label> <input type="text" required class="form-control"> </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    
+                                </div> <!-- End -->
+                                <!-- Mobile Banking info -->
+                                <div id="mobile_banking" class="tab-pane fade pt-3">
+                                    <div class="form-group ">
+                                        <label for="Select Your Bank"><h6>Select Your Bank</h6></label>
+                                        <select class="form-control" id="ccmonth">
+                                            <option value="" selected disabled>--Select Your Bank--</option>
+                                            <option>Bkash</option>
+                                            <option>Rocket</option>
+                                            <option>Nagad</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label for="TransectionId"><h6>Transection Id</h6></label>
+                                        <input type="text" name="TransectionId" placeholder="Transection Id" class="form-control " required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-primary ">Proceed Pyment</button>
+                                    </div>
+                                </div> <!-- End -->
+                                <!-- bank transfer info -->
+                                <div id="bank_transfer" class="tab-pane fade pt-3">
+                                    <div class="form-group ">
+                                        <label for="Select Your Bank"><h6>Select Your Bank</h6></label>
+                                        <select class="form-control" id="ccmonth">
+                                            <option value="" selected disabled>--Select Your Bank--</option>
+                                            <option>Dutch Bangla Bank</option>
+                                            <option>Prime Bank</option>
+                                            <option>Asia Bank</option>
+                                            <option>Islami Bank</option>
+                                            <option>Agrani Bank</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div> <!-- End -->
+                                <!-- End -->
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                </div>
+<!--                payment option-->
+     <a href="" class="btn btn-sm btn-success my-3 w-100 d-md-none">Place Order</a>
+     
+      </div>
+    </div>
+  </main>
+   </div>
+   </section>
+   
+   
+   
+<!--
+   <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Billing address</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required>
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required>
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Save this information for next time</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+              <label class="form-check-label" for="credit">Credit card</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="debit">Debit card</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+              <label class="form-check-label" for="paypal">PayPal</label>
+            </div>
+          </div>
+
+          <div class="row gy-3">
+            <div class="col-md-6">
+              <label for="cc-name" class="form-label">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="cc-number" class="form-label">Credit card number</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                Credit card number is required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-expiration" class="form-label">Expiration</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Expiration date required
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cc-cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <button class="w-100 btn btn-primary btn-sm" type="submit">Continue to checkout</button>
+        </form>
+      </div>
+-->
+   
+   
+   
+   
+    
+<!--Footer Section-->
+    <footer class="">
+        <div class="footer container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about">
+                        <h5>About us</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis illo, rerum, eligendi possimus dolorum aliquam illum neque nam autem expedita? Dolorum aliquid id necessitatibus culpa!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Useful Links</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Top Categories & Brands</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#">Home & Lifestyle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+<!--All javascript-->
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>

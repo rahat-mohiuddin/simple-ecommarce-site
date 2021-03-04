@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+<!--Tny Slider css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!--Boxicn cdn-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+<!--Favicon-->
+    <link rel="shortcut icon" href="../img/pos.png">
+    
+<!--Custom Style-->
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Posspot Shop</title>
+  </head>
+  <body>
+   
+<!--Header Section-->
+   <header class="header">
+       
+       <div class="overlay_mobile_Sidebar"></div>
+
+<div class="utility-nav d-none d-md-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="small"><i class="bx bx-envelope"></i> info@posspot.com | <i class="bx bx-phone"></i> +88 01863813906
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 text-right">
+        <p class="small"><i class='bx bx-mobile'></i> Save big on our app!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
+  <div class="container">
+
+    <button type="button" id="sidebar_nav" class="btn d-block d-md-none" onclick="openNav()">
+        <i class="bx bx-menu icon-single"></i>
+    </button>
+
+    <a class="navbar-brand" href="#">
+      <h4 class="font-weight-bold"><img src="../img/logo.png" alt=""></h4>
+    </a>
+
+    <ul class="navbar-nav ml-auto d-block d-md-none">
+      <li class="nav-item">
+        <a class="btn btn_cart" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">3</span></a>
+      </li>
+    </ul>
+
+    <div class="collapse navbar-collapse">
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+        <button class="btn btn_search my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
+      </form>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">0</span></a>
+        </li>
+        <li class="nav-item ml-md-3">
+          <a class="btn btn_login" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i> Log In / Register</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sub-menu">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+          <div class="dropdown-menu main_manu_dd" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Mans Fashion</a>
+            <a class="dropdown-item" href="#">Watches & Clock</a>
+            <a class="dropdown-item" href="#">Jewelry</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Campaign</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="search-bar d-block d-md-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="form-inline mb-3 mx-auto">
+          <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+          <button class="btn btn_search" type="submit"><i class="bx bx-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar for mobile navigation -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-10 pl-0">
+          <a class="btn btn-sm" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i>Log In</a>
+        </div>
+
+        <div class="col-2 text-left">
+          <button type="button" id="sidebarCollapseX" class="btn btn-link" onclick="closeNav()">
+              <i class="bx bx-x icon-single"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-unstyled components links">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoris</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Electronics</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Mans Fashion</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Watches & Clock</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Jewelry</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Campaign</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+</nav>
+       
+   </header>
+   
+   <!--breadcrumb-->
+   <div class="breadcrumb_outer">
+       <div class="container">
+           <ol class="breadcrumb primary-color">
+               <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+               <li class="breadcrumb-item active">Terms & Condition</li>
+           </ol>
+       </div>
+   </div>
+   
+   <!--Login Form Start-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Enter Phone Number</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+88</div>
+                                </div>
+                                <input type="text" class="form-control" id="" placeholder="Phone Number">
+                            </div>
+                            
+                            <button type="button" class="btn btn_login btn-block" onclick="window.location.href='registration_form.html';">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!--Login Form End-->
+   
+   
+   
+<!--Main Section Start-->
+
+   
+   <section class="container">
+       <div class="row">
+           <div class="col-12 text-center">
+               <h2 class="">Terms & Conditions</h2>
+               <p class="text-muted">Please Read this Document</p>
+               <p class="text-justify">
+                   Welcome to Website Name!
+                   These terms and conditions outline the rules and regulations for the use of Company Name's Website, located at Website.com.
+               <p class="text-justify">
+                   By accessing this website we assume you accept these terms and conditions. Do not continue to use Website Name if you do not agree to take all of the terms and conditions stated on this page.
+               </p>
+                  <p class="text-justify">
+                   The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: “Client”, “You” and “Your” refers to you, the person log on this website and compliant to the Company's terms and conditions. “The Company”, “Ourselves”, “We”, “Our” and “Us”, refers to our Company. “Party”, “Parties”, or “Us”, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+
+                  <p class="text-justify">
+                   Cookies
+                   We employ the use of cookies. By accessing Website Name, you agreed to use cookies in agreement with the Company Name's Privacy Policy.
+
+                   </p>
+                  <p class="text-justify">
+                   Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+                   </p><p>
+                   License
+                   Unless otherwise stated, Company Name and/or its licensors own the intellectual property rights for all material on Website Name. All intellectual property rights are reserved. You may access this from Website Name for your own personal use subjected to restrictions set in these terms and conditions.
+
+                   You must not:
+
+                   Republish material from Website Name
+                   Sell, rent or sub-license material from Website Name
+                   Reproduce, duplicate or copy material from Website Name
+                   Redistribute content from Website Name
+                   This Agreement shall begin on the date hereof.
+
+                   Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Company Name does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Company Name,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, Company Name shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+
+                   Company Name reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+
+                   You warrant and represent that:
+
+                   You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;
+                   The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;
+                   The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy
+                   The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
+                   You hereby grant Company Name a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
+
+                   Hyperlinking to our Content
+                   The following organizations may link to our Website without prior written approval:
+
+                   Government agencies;
+                   Search engines;
+                   News organizations;
+                   Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and
+                   System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.
+                   These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.
+
+                   We may consider and approve other link requests from the following types of organizations:
+
+                   commonly-known consumer and/or business information sources;
+                   dot.com community sites;
+                   associations or other groups representing charities;
+                   online directory distributors;
+                   internet portals;
+                   accounting, law and consulting firms; and
+                   educational institutions and trade associations.
+                   We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Company Name; and (d) the link is in the context of general resource information.
+
+                   These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.
+
+                   If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to Company Name. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+
+                   Approved organizations may hyperlink to our Website as follows:
+
+                   By use of our corporate name; or
+                   By use of the uniform resource locator being linked to; or
+                   By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.
+                   No use of Company Name's logo or other artwork will be allowed for linking absent a trademark license agreement.
+               </p>
+           </div>
+       </div>
+   </section>
+   
+   
+   
+   
+   
+   
+   
+    
+<!--Footer Section-->
+    <footer class="">
+        <div class="footer container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about">
+                        <h5>About us</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis illo, rerum, eligendi possimus dolorum aliquam illum neque nam autem expedita? Dolorum aliquid id necessitatibus culpa!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Useful Links</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Top Categories & Brands</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#">Home & Lifestyle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+<!--All javascript-->
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>

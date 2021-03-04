@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+<!--Tny Slider css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <!--Boxicn cdn-->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+<!--Favicon-->
+    <link rel="shortcut icon" href="/img/pos.png">
+   
+<!--Custom Style-->
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Posspot Shop</title>
+  </head>
+  <body>
+   
+<!--Header Section-->
+   <header class="header">
+       
+       <div class="overlay_mobile_Sidebar"></div>
+
+<div class="utility-nav d-none d-md-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <p class="small"><i class="bx bx-envelope"></i> info@posspot.com | <i class="bx bx-phone"></i> +88 01863813906
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 text-right">
+        <p class="small"><i class='bx bx-mobile'></i> Save big on our app!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
+  <div class="container">
+
+    <button type="button" id="sidebar_nav" class="btn d-block d-md-none" onclick="openNav()">
+        <i class="bx bx-menu icon-single"></i>
+    </button>
+
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="">
+    </a>
+
+    <ul class="navbar-nav ml-auto d-block d-md-none">
+      <li class="nav-item">
+        <a class="btn btn_cart" href="#"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">3</span></a>
+      </li>
+    </ul>
+
+    <div class="collapse navbar-collapse">
+      <form class="form-inline my-2 my-lg-0 mx-auto">
+        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+        <button class="btn btn_search my-2 my-sm-0" type="submit"><i class="bx bx-search"></i></button>
+      </form>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="btn" href="pages/cart.html"><i class="bx bxs-cart icon-single"></i> <span class="badge badge-danger">0</span></a>
+        </li>
+        <li class="nav-item ml-md-3">
+          <a class="btn btn_login" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i> Log In / Register</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light sub-menu main_manu">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Category
+                        </a>
+          <div class="dropdown-menu main_manu_dd" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Electronics</a>
+            <a class="dropdown-item" href="#">Mans Fashion</a>
+            <a class="dropdown-item" href="#">Watches & Clock</a>
+            <a class="dropdown-item" href="#">Jewelry</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Campaign</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="search-bar d-block d-md-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="form-inline mb-3 mx-auto">
+          <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+          <button class="btn btn_search" type="submit"><i class="bx bx-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar for mobile navigation -->
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-10 pl-0">
+          <a class="btn btn-sm" href="#" data-toggle="modal" data-target="#loginModal"><i class="bx bxs-user-circle mr-1"></i>Log In</a>
+        </div>
+
+        <div class="col-2 text-left">
+          <button type="button" id="sidebarCollapseX" class="btn btn-link" onclick="closeNav()">
+              <i class="bx bx-x icon-single"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="list-unstyled components links">
+    <li class="active">
+      <a href="#">Home</a>
+    </li>
+    <li>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Categoris</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Electronics</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Mans Fashion</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Watches & Clock</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#"><span class="pl-4"></span>Jewelry</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Campaign</a>
+    </li>
+    <li>
+      <a href="#">About</a>
+    </li>
+    <li>
+      <a href="#">Contact</a>
+    </li>
+  </ul>
+</nav>
+       
+   </header>
+   
+<!--Login Form Start-->
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Enter Phone Number</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">+88</div>
+                                </div>
+                                <input type="text" class="form-control" id="" placeholder="Phone Number">
+                            </div>
+                            <button type="button" class="btn btn_login btn-block" onclick="window.location.href='pages/registration_form.html';">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+<!--Login Form End-->
+   
+<!--Slider Section-->
+    <section class="slider">
+        
+        <div class="container">
+            <div class="main_slider">
+                <div class="slide_item"><img src="img/banner/bnr1.jpg" alt="Electronics Offer"></div>
+                <div class="slide_item"><img src="img/banner/bnr2.jpg" alt="Fashion Discount"></div>
+                <div class="slide_item"><img src="img/banner/bnr3.jpg" alt="Mega Deal"></div>
+                <div class="slide_item"><img src="img/banner/bnr4.jpg" alt="Beauty Deal"></div>
+            </div>
+        </div>
+        
+    </section>
+<!--Product Section-->
+    <section class="product container">
+       <h3 class="section_title">Feature Product</h3>
+        <div class="feature_product">
+           
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="pages/single_product.html">
+                                <img class="pic-1" src="img/product/pic1.png">
+                            </a>
+                            <a class="add-to-cart" href="#">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic2.png"><img class="pic-2" src="">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳699</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic8.png">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳456</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic9.png">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic1.png">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic2.png"><img class="pic-2" src="">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳699</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic8.png">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳456</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-grid">
+                        <div class="product-image">
+                            <a href="#">
+                                <img class="pic-1" src="img/product/pic9.png">
+                            </a>
+                            <a class="add-to-cart" href="">Add to cart</a>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Leather Shoes</a></h3>
+                            <span class="price">৳890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="offer_banner">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="banner_outer bnr1">
+                        <img src="img/banner/offer1.jpg" alt="">
+                        <div class="overlay_bnr">
+                            <h4>Winter Mega Discount!</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, atque.</p>
+                            <button class="btn btn-sm btn-outline-light">Show Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="banner_outer bnr2">
+                        
+                        <img src="img/banner/offer2.jpg" alt="">
+                        <div class="overlay_bnr">
+                            <h4>Winter Mega Discount!</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, atque.</p>
+                            <button class="btn btn-sm btn-outline-light">Show Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="all_product">
+            
+        </div>
+    </section>
+    
+    <div class="newsletter">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="content">
+                    <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <span class="input-group-btn">
+                            <button class="btn" type="submit">Subscribe Now</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!--Footer Section-->
+    <footer class="">
+        <div class="footer container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="about">
+                        <h5>About us</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis illo, rerum, eligendi possimus dolorum aliquam illum neque nam autem expedita? Dolorum aliquid id necessitatibus culpa!</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Useful Links</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Top Categories & Brands</h5>
+                    <ul class="footer_nav">
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                        <li><a href="#">Home & Lifestyle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+<!--All javascript-->
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
